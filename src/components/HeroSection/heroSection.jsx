@@ -16,7 +16,7 @@ const HeroSection = () => {
   const sendEmail = event => {
 
     //To send Mail
-    emailjs.sendForm('service_kgc2jh8', 'template_pyl7ntg', form.current, 'fwVjw53fOy66fatzW')
+    emailjs.sendForm('service_bg8fu3o', 'template_jsraigk', form.current, 'mUhk-KJOg2W4_MMPc')
     .then((result) => {
         console.log(result.text);
         console.log("message sent");
