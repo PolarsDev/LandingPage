@@ -49,7 +49,7 @@ const HeroSection = () => {
 
       {/* ----------------------- Sub-Heading ------------------------ */}
       <div className='hero-subheading'>
-        Polaris for your Developement.
+        Your Polaris for Development
       </div>
 
 <form ref={form} onSubmit={sendEmail}>
