@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.11
   '@vitejs/plugin-react': ^3.1.0
   axios: 0.24.0
+  dotenv: ^16.0.3
   react: ^18.2.0
   react-dom: ^18.2.0
   vite: ^4.2.0
@@ -13,6 +14,7 @@ specifiers:
 dependencies:
   '@emailjs/browser': 3.10.0
   axios: 0.24.0
+  dotenv: 16.0.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -599,6 +601,11 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
 
   /electron-to-chromium/1.4.333:
     resolution: {integrity: sha512-YyE8+GKyGtPEP1/kpvqsdhD6rA/TP1DUFDN4uiU/YI52NzDxmwHkEb3qjId8hLBa5siJvG0sfC3O66501jMruQ==}
