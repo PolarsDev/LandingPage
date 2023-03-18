@@ -3,7 +3,6 @@ import './style.css'
 import emailjs from '@emailjs/browser';
 import './subscribe.css'
 import axios from 'axios';
-import * as dotenv from 'dotenv'
 
 
 const HeroSection = () => {
@@ -31,7 +30,6 @@ const HeroSection = () => {
     axios.post("https://sheet.best/api/sheets/de377a36-3666-43e6-bc1e-f9636e0ad02f",data).then((response)=>{
       setDepartment('');
       console.log("data clear");
-
     })
 
     // To prevent page refresh
