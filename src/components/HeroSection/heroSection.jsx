@@ -3,6 +3,7 @@ import './style.css'
 import emailjs from '@emailjs/browser';
 import './subscribe.css'
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 
 const HeroSection = () => {
@@ -39,6 +40,15 @@ const HeroSection = () => {
     // setDepartment('');
 };
 
+const Alert = () =>{
+
+  Swal.fire(
+    'Great!',
+    'You are now Subscribed to Us!',
+    'success'
+  )
+}
+
 
   return <div className='hero-section-wrapper'>
     <div className='flex absolute-center flex-col hero-section max-width'>
@@ -58,7 +68,7 @@ const HeroSection = () => {
       <label className="btn-1" htmlFor="click">Subscribe</label>
       <div className='field'>
         <input type="email" id="user_email" name='user_email' value={user_email}  placeholder="Enter Your Email" onChange={event => setDepartment(event.target.value)}/>
-        <input type="submit" htmlFor="click" className="btn-2" value="Subscribe" />
+        <input type="submit" htmlFor="click" className="btn-2" value="Subscribe" onClick={Alert}/>
       </div>
       </div>
       </form>
