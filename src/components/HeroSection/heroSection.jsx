@@ -7,7 +7,6 @@ import Swal from 'sweetalert2'
 
 
 const HeroSection = () => {
- 
   const [user_email, setDepartment] = useState('');
 
   const form = useRef();
@@ -26,6 +25,7 @@ const HeroSection = () => {
     const data={
       Email: user_email
     }
+
 
     axios.post("https://sheet.best/api/sheets/b3270c5f-63e7-4815-af24-2983640fe55f",data).then((response)=>{
       // setDepartment('');
