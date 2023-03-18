@@ -27,14 +27,18 @@ const HeroSection = () => {
       Email: user_email
     }
 
-    axios.post("https://sheet.best/api/sheets/de377a36-3666-43e6-bc1e-f9636e0ad02f",data).then((response)=>{
-    //clear input values after submit 
-      setDepartment('');
+    axios.post("https://sheet.best/api/sheets/b3270c5f-63e7-4815-af24-2983640fe55f",data).then((response)=>{
+      // setDepartment('');
       // console.log("data clear");
+      // console.log("data added to sheet");
+      console.log(response);
     })
 
     // To prevent page refresh
     event.preventDefault();
+
+    //clear input values after submit 
+    setDepartment('');
 };
 
 const Alert = () =>{
