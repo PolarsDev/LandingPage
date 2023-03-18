@@ -3,11 +3,10 @@ import './style.css'
 import emailjs from '@emailjs/browser';
 import './subscribe.css'
 import axios from 'axios';
+import Swal from 'sweetalert2'
 
 
 const HeroSection = () => {
-  // console.log(process.env.REACT_APP_SHEET_LINK);
-  // // dotenv.config()
   const [user_email, setDepartment] = useState('');
 
   const form = useRef();
@@ -28,7 +27,7 @@ const HeroSection = () => {
     }
 
     axios.post("https://sheet.best/api/sheets/de377a36-3666-43e6-bc1e-f9636e0ad02f",data).then((response)=>{
-      setDepartment('');
+      // setDepartment('');
       console.log("data clear");
     })
 
@@ -36,8 +35,17 @@ const HeroSection = () => {
     event.preventDefault();
 
     //clear input values after submit 
-    // setDepartment('');
+    setDepartment('');
 };
+
+const Alert = () =>{
+
+  Swal.fire(
+    'Great!',
+    'You are now Subscribed to Us!',
+    'success'
+  )
+}
 
 
   return <div className='hero-section-wrapper'>
@@ -58,7 +66,7 @@ const HeroSection = () => {
       <label className="btn-1" htmlFor="click">Subscribe</label>
       <div className='field'>
         <input type="email" id="user_email" name='user_email' value={user_email}  placeholder="Enter Your Email" onChange={event => setDepartment(event.target.value)}/>
-        <input type="submit" htmlFor="click" className="btn-2" value="Subscribe" />
+        <input type="submit" htmlFor="click" className="btn-2" value="Subscribe" onClick={Alert}/>
       </div>
       </div>
       </form>
