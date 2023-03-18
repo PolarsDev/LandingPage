@@ -1,0 +1,17 @@
+.button-wrapper{
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--bg-black);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 35px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+@media all and (max-width: 767px){
+    .button-wrapper{
+        font-size: 18px;
+        padding: 16px 24px;
+    }
+}
