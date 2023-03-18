@@ -7,8 +7,7 @@ import Swal from 'sweetalert2'
 
 
 const HeroSection = () => {
-  // console.log(process.env.REACT_APP_SHEET_LINK);
-  // // dotenv.config()
+ 
   const [user_email, setDepartment] = useState('');
 
   const form = useRef();
@@ -29,15 +28,13 @@ const HeroSection = () => {
     }
 
     axios.post("https://sheet.best/api/sheets/de377a36-3666-43e6-bc1e-f9636e0ad02f",data).then((response)=>{
+    //clear input values after submit 
       setDepartment('');
-      console.log("data clear");
+      // console.log("data clear");
     })
 
     // To prevent page refresh
     event.preventDefault();
-
-    //clear input values after submit 
-    // setDepartment('');
 };
 
 const Alert = () =>{
