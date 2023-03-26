@@ -26,11 +26,7 @@ const HeroSection = () => {
       Email: user_email
     }
 
-
-    axios.post("https://sheet.best/api/sheets/b3270c5f-63e7-4815-af24-2983640fe55f",data).then((response)=>{
-      // setDepartment('');
-      // console.log("data clear");
-      // console.log("data added to sheet");
+    axios.post(import.meta.env.VITE_SHEET_LINK,data).then((response)=>{
       console.log(response);
     })
 
